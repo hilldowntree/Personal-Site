@@ -1,0 +1,89 @@
+.Mandala {
+  position: relative; }
+
+.MandalaSVG {
+  width: 75%;
+  margin-left: 10%;
+  margin-top: 50px;
+  stroke: white; }
+
+.MandalaSVG svg {
+  fill: url(#Gradient); }
+
+.MandalaSVG svg stop {
+  transition: 2s; }
+
+.box {
+  width: 50%;
+  height: 50%;
+  position: absolute; }
+
+.topRight {
+  top: 0;
+  right: 0; }
+  .topRight :hover ~ .MandalaSVG {
+    fill: url(#Gradient1); }
+  .topRight :hover .HTML {
+    display: block;
+    -webkit-animation: colour1 1s linear;
+    animation: colour1 1s linear; }
+
+@-webkit-keyframes colour1 {
+  0% {
+    color: black; }
+  100% {
+    color: white; } }
+
+@keyframes colour1 {
+  0% {
+    color: black; }
+  100% {
+    color: white; } }
+
+.bottomRight {
+  bottom: 0;
+  right: 0; }
+  .bottomRight :hover ~ .MandalaSVG {
+    fill: url(#Gradient2); }
+  .bottomRight :hover .JS {
+    color: white; }
+
+.bottomLeft {
+  bottom: 0;
+  left: 0; }
+  .bottomLeft :hover ~ .MandalaSVG {
+    fill: url(#Gradient3); }
+  .bottomLeft :hover .RB {
+    color: white; }
+
+.topLeft {
+  top: 0;
+  left: 0; }
+  .topLeft :hover ~ .MandalaSVG {
+    fill: url(#Gradient4); }
+  .topLeft :hover .XL {
+    color: white; }
+
+.hide {
+  display: none; }
+
+.HTML {
+  margin-left: 45%;
+  transition: color 1s; }
+
+.JS {
+  margin-left: 35%;
+  margin-top: 25%;
+  width: 50%;
+  transition: color 1s; }
+
+.XL {
+  margin-left: 10%;
+  width: 50%;
+  transition: color 1s; }
+
+.RB {
+  margin-top: 25%;
+  margin-left: 15%;
+  width: 50%;
+  transition: color 1s; }

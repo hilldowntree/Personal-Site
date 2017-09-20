@@ -1,0 +1,134 @@
+$backgroundcolor: #201A23;
+$fontcolor: #FBFBFB;
+$nohovercolor: #2E2532;
+$hovercolor1: url(#Gradient1);
+$hovercolor2: url(#Gradient2);
+$hovercolor3: url(#Gradient3);
+$hovercolor4: url(#Gradient4);
+
+.Mandala {
+	display:block;
+	width: 100%;
+}
+
+.MandalaSVG {
+	width:55%;
+	margin-left: 25%;
+	margin-right: 20%;
+	//padding:0;
+	//border: 0;
+	stroke:#2E2532;
+	fill:$nohovercolor;
+	animation: mandalaLoad linear 2s;
+}
+
+.box {
+	width:50%;
+	height:48%;
+	position:absolute;
+	//border:1px solid red;
+}
+
+.hide {
+	opacity:0
+}
+
+.HTML {
+	margin-top:15%;
+	margin-left:45%;
+	animation: textload linear .6s;
+}
+
+.JS {
+	margin-left:45%;
+	margin-top:15%;
+	width:50%;
+	animation: loadtext linear .6s;
+	animation-delay: 0.5s;
+}
+
+.XL {
+	margin-top:15%;
+	margin-left:15%;
+	width:50%;
+	animation: loadtext linear .6s;
+	animation-delay: 1.5s;
+}
+
+.RB {
+	margin-top: 5%;
+	margin-left:15%;
+	width:50%;
+	animation: loadtext linear .6s;
+	animation-delay: 1s;
+}
+
+.topRight{
+	top:0;
+	right:0;
+	//border:5px solid green;
+	&:hover ~ .MandalaSVG{
+		fill:$hovercolor1;
+	}
+	&:hover > .hide {
+		opacity:1
+	}
+}
+
+.bottomRight{
+	bottom:0;
+	right:0;
+	&:hover ~ .MandalaSVG{
+		fill:$hovercolor2;
+	}
+	&:hover .hide {
+		opacity:1;
+	}
+}
+
+.bottomLeft{
+	bottom:0;
+	left:0;
+	&:hover ~ .MandalaSVG{
+		fill:$hovercolor3;
+	}
+	&:hover .RB {
+		opacity:1
+	}
+}
+
+.topLeft{
+	top:5%;
+	left:0;
+	&:hover ~ .MandalaSVG{
+		fill:$hovercolor4;
+	}
+	&:hover .XL{
+		opacity:1
+	}
+}
+
+@keyframes hovertext {
+	0% {opacity:0;}
+	100%{opacity:1}
+}
+
+@keyframes textload{
+
+
+}
+
+@keyframes mandalaLoad {
+	5%{opacity:.5}
+	10%{fill:$hovercolor1}
+	40%{fill:$hovercolor2}
+	70%{fill:$hovercolor3}
+	90%{fill:$hovercolor4}
+	100%{fill:$nohovercolor;
+	opacity:1}
+}
+
+
+
+
+
